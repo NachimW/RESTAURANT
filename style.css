@@ -1,0 +1,209 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+/* ======================
+   MODE CLAIR (DEFAULT)
+====================== */
+
+body{
+background:#fff;
+color:#111;
+transition:0.3s;
+}
+
+/* ======================
+   HEADER
+====================== */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#111;
+color:#fff;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+}
+
+/* NAV DESKTOP */
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+/* ======================
+   ICONES (BURGER + THEME)
+====================== */
+
+.header-icons{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+/* BURGER */
+.burger{
+display:none;
+font-size:25px;
+cursor:pointer;
+}
+
+/* THEME ICON */
+.toggle-theme{
+font-size:20px;
+cursor:pointer;
+color:white;
+}
+
+/* ======================
+   HERO
+====================== */
+
+.hero{
+height:70vh;
+background:url("https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg") center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+/* ======================
+   SECTIONS
+====================== */
+
+.section{
+padding:50px 20px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.grid img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:10px;
+}
+
+/* ======================
+   FOOTER
+====================== */
+
+footer{
+background:#111;
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+.footer-content{
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+iframe{
+width:100%;
+height:300px;
+margin-top:20px;
+border:0;
+border-radius:10px;
+}
+
+/* ======================
+   RESPONSIVE MOBILE
+====================== */
+
+@media(max-width:768px){
+
+/* BURGER visible */
+.burger{
+display:block;
+}
+
+/* NAV mobile */
+nav{
+display:none;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:#111;
+}
+
+nav ul{
+flex-direction:column;
+padding:20px;
+}
+
+nav.active{
+display:block;
+}
+
+/* garder icône thème visible */
+.toggle-theme{
+display:block;
+}
+}
+
+/* ======================
+   MODE SOMBRE
+====================== */
+
+body.dark{
+background:#0f0f0f;
+color:#fff;
+}
+
+body.dark header{
+background:#1c1c1c;
+}
+
+body.dark .section{
+background:#151515;
+}
+
+body.dark .grid img{
+filter:brightness(0.85);
+}
+
+body.dark footer{
+background:#1c1c1c;
+}
